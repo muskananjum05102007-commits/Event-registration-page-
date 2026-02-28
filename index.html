@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Simple Event Registration Page</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f4f6f9;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        header {
+
+            background-color: #2c3e50;
+
+            color: white;
+
+            padding: 20px;
+
+            text-align: center;
+
+        }
+
+        section {
+
+            padding: 20px;
+
+            margin: 20px;
+
+            background-color: white;
+
+            border-radius: 8px;
+
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+        }
+
+        h2 {
+
+            color: #2c3e50;
+
+        }
+
+        label {
+
+            font-weight: bold;
+
+            display: block;
+
+            margin-top: 10px;
+
+        }
+
+        input, select, textarea {
+
+            width: 100%;
+
+            padding: 8px;
+
+            margin: 5px 0 15px 0;
+
+            border-radius: 5px;
+
+            border: 1px solid #ccc;
+
+        }
+
+        /* Radio Button Styling */
+
+        .radio-group {
+
+            display: flex;
+
+            gap: 25px;
+
+            margin: 8px 0 15px 0;
+
+        }
+
+        .radio-group label {
+
+            font-weight: normal;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 6px;
+
+        }
+
+        .radio-group input[type="radio"] {
+
+            width: auto;
+
+        }
+
+        fieldset {
+
+            margin-bottom: 20px;
+
+            border-radius: 5px;
+
+            padding: 15px;
+
+        }
+
+        legend {
+
+            font-weight: bold;
+
+        }
+
+        button {
+
+            padding: 10px 15px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        .submit-btn {
+
+            background-color: #27ae60;
+
+            color: white;
+
+        }
+
+        .reset-btn {
+
+            background-color: #e74c3c;
+
+            color: white;
+
+        }
+
+        table {
+
+            width: 100%;
+
+            border-collapse: collapse;
+
+            margin-top: 10px;
+
+        }
+
+        table, th, td {
+
+            border: 1px solid #ccc;
+
+        }
+
+        th, td {
+
+            padding: 10px;
+
+            text-align: center;
+
+        }
+
+        footer {
+
+            background-color: #2c3e50;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 15px;
+
+            margin-top: 20px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Tech Innovators Workshop 2026</h1>
+
+    <p>Enhancing skills in Web Development and Emerging Technologies</p>
+
+</header>
+
+<section>
+
+    <h2>Event Information</h2>
+
+    <ul>
+
+        <li><strong>Date:</strong> 15 March 2026</li>
+
+        <li><strong>Time:</strong> 10:00 AM – 4:00 PM</li>
+
+        <li><strong>Venue:</strong> Seminar Hall, ABC Engineering College</li>
+
+        <li><strong>Organizer:</strong> Department of Computer Science</li>
+
+    </ul>
+
+</section>
+
+<section>
+
+    <h2>Registration Form</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <fieldset>
+
+            <legend>Personal Information</legend>
+
+            <label>Name:</label>
+
+            <input type="text" id="name" required>
+
+            <label>Email:</label>
+
+            <input type="email" id="email" required>
+
+            <label>Phone Number:</label>
+
+            <input type="tel" id="phone" required>
+
+            <label>Date of Birth:</label>
+
+            <input type="date" required>
+
+            <label>Gender:</label>
+
+            <div class="radio-group">
+
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Event Selection</legend>
+
+            <label>Select Event:</label>
+
+            <select>
+
+                <option>Web Development Workshop</option>
+
+                <option>AI & Machine Learning</option>
+
+                <option>Cloud Computing</option>
+
+            </select>
+
+            <label>Mode of Participation:</label>
+
+            <div class="radio-group">
+
+                <label><input type="radio" name="mode" value="Online"> Online</label>
+
+                <label><input type="radio" name="mode" value="Offline"> Offline</label>
+
+            </div>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend>Additional Details</legend>
+
+            <label>College / Company Name:</label>
+
+            <input type="text">
+
+            <label>Upload ID Proof:</label>
+
+            <input type="file">
+
+            <label>Comments / Expectations:</label>
+
+            <textarea rows="4"></textarea>
+
+            <label style="font-weight: normal;">
+
+                <input type="checkbox" required style="width:auto;">
+
+                I confirm that the above details are correct.
+
+            </label>
+
+        </fieldset>
+
+        <button type="submit" class="submit-btn">Submit</button>
+
+        <button type="reset" class="reset-btn">Reset</button>
+
+    </form>
+
+</section>
+
+<section>
+
+    <h2>Registered Participants</h2>
+
+    <table>
+
+        <tr>
+
+            <th>Name</th>
+
+            <th>Email</th>
+
+            <th>Phone</th>
+
+            <th>Event</th>
+
+            <th>Mode</th>
+
+        </tr>
+
+        <tr>
+
+            <td>XYZ</td>
+
+            <td>xyz@gmail.com</td>
+
+            <td>9876543210</td>
+
+            <td>Web Development Workshop</td>
+
+            <td>Offline</td>
+
+        </tr>
+
+    </table>
+
+</section>
+
+<footer>
+
+    <p>Contact Email: events@abccollege.edu</p>
+
+    <p>Help Desk Number: +91 94444 12345</p>
+
+    <p>© 2026 Department of Computer Science, ABC Engineering College. All Rights Reserved.</p>
+
+</footer>
+
+<script>
+
+    function validateForm() {
+
+        alert("Registration Submitted Successfully!");
+
+        return true;
+
+    }
+
+</script>
+
+</body>
+
+</html>
+    
+  </body>
+  
+</html>
